@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./normalize.css" rel="stylesheet" />
+    <link href="./ios.css" rel="stylesheet" />
+    <title>Даниил Мельников</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="./avatar.png" alt="avatar" class="header__avatar" />
+      <div class="header__textContainer">
+        <h1 class="header__title">Даниил Мельников</h1>
+        <h3 class="header__subtitle">Всего лишь человек</h3>
+      </div>
+    </header>
+
+    <main>
+      <section class="links">
+        <h2 class="links__header">Контакты</h2>
+        <ul class="links__container">
+          <li class="links__link">
+            <p class="links__title">Телеграм</p>
+            <a
+              class="linsk__link contact-link"
+              href="https://t.me/Maes7r0"
+              target="_blank"
+            >
+              @Maes7r0
+            </a>
+          </li>
+
+          <li class="links__link">
+            <p class="links__title">Эл. почта</p>
+            <a
+              class="linsk__link contact-link"
+              href="mailto:daniil.goodman1st@gmail.com"
+            >
+              daniil.goodman1st@gmail.com
+            </a>
+          </li>
+
+          <li class="links__link">
+            <p class="links__title">Телефон</p>
+            <a class="linsk__link contact-link" href="tel:+79883165119">
+              +7 988 316-51-19
+            </a>
+          </li>
+
+          <li class="links__link">
+            <p class="links__title">ВКонтакте</p>
+            <a
+              class="linsk__link contact-link"
+              href="https://vk.com/id207764231"
+              target="_blank"
+            >
+              vk.com/id207764231
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="links">
+        <h2 class="links__header">Опыт работы</h2>
+        <ul class="links__container">
+          <li class="links__link">
+            <p class="links__title">Компания</p>
+            <span class="linsk__link">Digital Supremacy</span>
+          </li>
+
+          <li class="links__link">
+            <p class="links__title">Менеджер тех. поддержки</p>
+            <span class="linsk__link">3 года 11 месяцев</span>
+          </li>
+
+          <li class="links__link">
+            <p class="links__title">Тестировщик</p>
+            <span class="linsk__link">1 год 6 месяцев</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="links">
+        <h2 class="links__header">Специализация</h2>
+        <ul class="links__container">
+          <li class="links__link">
+            <p class="links__title">Web</p>
+            <span class="linsk__link">Тестирование web-приложений</span>
+          </li>
+
+          <li class="links__link">
+            <p class="links__title">Mobile</p>
+            <span class="linsk__link">Тестирование мобильных приложений</span>
+          </li>
+
+          <li class="links__link links__link_tools">
+            <button type="button" class="linsk__link tools-button" id="openToolsModal">
+              Освоенные инструменты
+            </button>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <div class="modal" id="toolsModal">
+      <div class="modal__content">
+        <button type="button" class="modal__close" id="closeToolsModal">
+          ×
+        </button>
+
+        <h2 class="links__header">Освоенные инструменты</h2>
+
+        <ul class="links__container">
+          <li class="links__link">Jira</li>
+          <li class="links__link">Яндекс Трекер</li>
+          <li class="links__link">BuildIn</li>
+          <li class="links__link">Swagger</li>
+          <li class="links__link">Test It</li>
+          <li class="links__link">TestRail</li>
+          <li class="links__link">Kibana</li>
+          <li class="links__link">Sentry</li>
+          <li class="links__link">Jaeger</li>
+          <li class="links__link">Metabase</li>
+          <li class="links__link">Hasura</li>
+          <li class="links__link">DBeaver</li>
+          <li class="links__link">Postman</li>
+          <li class="links__link">Android Studio</li>
+          <li class="links__link">Xcode</li>
+          <li class="links__link">DevTools</li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js.js"></script>
+
+    <script>
+      const openToolsModal = document.getElementById("openToolsModal");
+      const closeToolsModal = document.getElementById("closeToolsModal");
+      const toolsModal = document.getElementById("toolsModal");
+
+      openToolsModal.addEventListener("click", () => {
+        toolsModal.classList.add("modal_opened");
+      });
+
+      closeToolsModal.addEventListener("click", () => {
+        toolsModal.classList.remove("modal_opened");
+      });
+
+      toolsModal.addEventListener("click", (event) => {
+        if (event.target === toolsModal) {
+          toolsModal.classList.remove("modal_opened");
+        }
+      });
+    </script>
+  </body>
+</html>
